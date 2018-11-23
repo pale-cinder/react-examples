@@ -17,7 +17,7 @@ class App extends Component {
     // (!!) Don't do this: this.state.persons[0].name = 'Pale';
     this.setState( { 
       persons: [
-      { name: 'Pale', age: 28 },
+      { name: 'Cinder', age: 28 },
       { name: 'Weak', age: 29 },
       { name: 'Albus', age: 7 }
     ]
@@ -30,8 +30,8 @@ class App extends Component {
         <h1>Hello, I am a React App</h1>
         <p>This is something workable</p>
 
-        <button onClick={this.switchNameHandler}>Switch name</button>
-
+        <button onClick={() => this.switchNameHandler('Pale-Cinder')}>Switch name</button>
+   
         <h1>Let's introduce ourselves!</h1>
 
         <Person />
@@ -43,7 +43,8 @@ class App extends Component {
         <h1>Let's talk!</h1>
 
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
-        <Person name={this.state.persons[1].name} age={this.state.persons[1].age} >My hobbies: Coding</Person>
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age} 
+        click={this.switchNameHandler.bind(this, 'Cinder-')} >My hobbies: Coding</Person>
         <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
 
       </div>
