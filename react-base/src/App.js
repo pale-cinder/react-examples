@@ -8,11 +8,20 @@ class App extends Component {
       { name: 'Cinder', age: 28 },
       { name: 'Weak', age: 29 },
       { name: 'Albus', age: 6 }
-    ]
+    ],
+    otherState: 'some'
   }
 
   switchNameHandler = () => {
-    console.log('was clicked');
+    //console.log('was clicked');
+    // (!!) Don't do this: this.state.persons[0].name = 'Pale';
+    this.setState( { 
+      persons: [
+      { name: 'Pale', age: 28 },
+      { name: 'Weak', age: 29 },
+      { name: 'Albus', age: 7 }
+    ]
+  })
   }
 
   render() {
@@ -22,7 +31,7 @@ class App extends Component {
         <p>This is something workable</p>
 
         <button onClick={this.switchNameHandler}>Switch name</button>
-        
+
         <h1>Let's introduce ourselves!</h1>
 
         <Person />
