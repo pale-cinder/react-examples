@@ -54,7 +54,11 @@ class App extends Component {
     if (this.state.showPersons) {
       persons = (
         <div>
-              <h1>Let's introduce ourselves!</h1>
+          {this.state.persons.map(person => {
+            return <Person name={person.name} 
+            age={person.age} />
+          })}
+              {/* <h1>Let's introduce ourselves!</h1>
 
               <Person />
               <Person />
@@ -74,7 +78,7 @@ class App extends Component {
                 changed={this.nameChangeHandler}>My hobbies: Coding</Person>
               <Person 
                 name={this.state.persons[2].name} 
-                age={this.state.persons[2].age} />
+                age={this.state.persons[2].age} /> */}
             </div> 
 
       )
