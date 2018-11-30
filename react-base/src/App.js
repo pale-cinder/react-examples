@@ -25,14 +25,33 @@ class App extends Component {
   // })
   // }
 
-  nameChangeHandler = (event) => {
-    this.setState( { 
-      persons: [
-      { id: 'fdfsf4', name: 'Cinder', age: 28 },
-      { id: 'adg43', name: event.target.value, age: 29 }, //dynamically call the event and update the field
-      { id: 'dfrgt4', name: 'Albus', age: 7 }
-    ]
-  })
+  nameChangeHandler = (event, id) => {
+    const personIndex = this.state.persons.findIndex(p => {
+      return p.id ===id;
+    });
+
+    const person = { 
+      //spread operator
+      ...this.state.persons[personIndex]
+    };
+
+    // const person = Object.assign({}, this.state.persons[personIndex]);
+
+    person.name = event.target.value;
+
+    const persons = [...this.state.persons];
+    persons[personIndex] = person;
+
+    this.setState( {persons: persons} )
+
+  //     { 
+  //     persons: [
+  //     { id: 'fdfsf4', name: 'Cinder', age: 28 },
+  //     { id: 'adg43', name: event.target.value, age: 29 }, //dynamically call the event and update the field
+  //     { id: 'dfrgt4', name: 'Albus', age: 7 }
+  //   ]
+  // }
+  // )
   }
 
   deletePersonHandler = (personIndex) => {
@@ -66,7 +85,8 @@ class App extends Component {
             click={() => this.deletePersonHandler(index)}
             name={person.name} 
             age={person.age} 
-            key={person.id}/>
+            key={person.id}
+            changed={(event) => this.nameChangeHandler(event, person.id)} />
           })}
               {/* <h1>Let's introduce ourselves!</h1>
 
