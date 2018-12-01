@@ -68,9 +68,9 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
       font: 'inherit',
-      border:'1px solid blue',
+      border:'1px solid red',
       padding: '8px',
       cursor: 'pointer',
     };
@@ -110,7 +110,9 @@ class App extends Component {
                 name={this.state.persons[2].name} 
                 age={this.state.persons[2].age} /> */}
             </div> 
-      )
+      );
+
+      style.backgroundColor = 'red';
     }
 
     return (
