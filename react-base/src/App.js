@@ -115,10 +115,12 @@ class App extends Component {
       style.backgroundColor = 'red';
     }
 
+    let classes = ['red', 'bold'].join(' '); 
+
     return (
         <div className="App">
         <h1>Hello, I am a React App</h1>
-        <p>This is something workable</p>
+        <p className={classes}>This is something workable</p>
 
         <button 
           style={style}

@@ -2,5 +2,11 @@
   text-align: center;
 }
 
+.red {
+  color: rebeccapurple;
+}
 
+.bold {
+  font-weight: bold;
+}
 
