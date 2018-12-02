@@ -209,6 +209,23 @@ module.exports = {
               name: 'static/media/[name].[hash:8].[ext]',
             },
           },
+
+          // {
+          //   test: /\.css$/,
+          //   use: [
+          //     require.resolve('style-loader'),
+          //     {
+          //       loader: require.resolve('css-loader'),
+          //       options: {
+          //         importLoaders: 1,
+          //         modules: true,
+          //         localIndexName: ''
+          //       }
+          //     }
+          //   ]
+          //   },
+          // },
+
           // Process application JS with Babel.
           // The preset includes JSX, Flow, and some ESnext features.
           {

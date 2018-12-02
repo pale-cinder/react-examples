@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.css';
 //import Radium, { StyleRoot } from 'radium';
 import Person from './Person/Person';
 
@@ -136,7 +136,7 @@ class App extends Component {
 
     return (
       //<StyleRoot>
-        <div className="App">
+        <div className={classes.App}>
           <h1>Hello, I am a React App</h1>
           <p className={classes.join(' ')}>This is something workable</p>
 
