@@ -69,6 +69,11 @@ class App extends Component {
   }
 
   render() {
+
+    // css modules:
+    // let person = null;
+    // let btnClass = '';
+
     const style = {
       backgroundColor: 'green',
       font: 'inherit',
@@ -123,6 +128,9 @@ class App extends Component {
       //   backgroundColor: 'salmon',
       //   color: 'black'
       // };
+
+      // css modules:
+      // btnClass = classes.Red;
     }
 
     //let classes = ['red', 'bold'].join(' '); 
@@ -142,6 +150,8 @@ class App extends Component {
 
           <button 
             style={style}
+            // css modules:
+            // className={btnClass}
             onClick={this.togglePersonsHandler}>Toggle Persons</button>
             {persons}          
         </div>
