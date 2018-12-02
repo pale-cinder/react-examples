@@ -8,7 +8,8 @@
 
 }
 
-/* @media (min-width: 500px) {
+/* use this for css modules:
+@media (min-width: 500px) {
     .Person {
         width: 450px;
     }
