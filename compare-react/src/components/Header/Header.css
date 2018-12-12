@@ -1,0 +1,19 @@
+.nav {
+  background-color: black;
+  a: hover;
+  color: #A8BFA3; }
+
+.nav-left a {
+  color: #fff;
+  fornt-weight: bold; }
+
+a.r-item {
+  color: #A8BFA3;
+  padding: 0.5rem 1.75rem; }
+  a.r-item mobile {
+    color: #A8BFA3; }
+    a.r-item mobile:hover {
+      background-color: #f1f1f1; }
+
+.nav-toggle span {
+  background-color: #2F8B98; }
