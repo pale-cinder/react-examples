@@ -37,3 +37,22 @@ class Person extends Human {
 const person = new Person(); //storing the instances 
 person.printMyName(); //execute
 person.printGender();
+
+
+---
+ES6 properties:
+constructor () {
+    this.myProperty = 'value'
+}
+
+ES7 properties new way:
+myProperty = 'value'
+
+
+---
+ES6 methods:
+myMethod () {...}
+
+ES7 methods new way:
+myMethod = () => {...}
+
