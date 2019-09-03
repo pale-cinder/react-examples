@@ -9,9 +9,13 @@
 
 
 --------CSS
+.person {
+    display: ....
+}
 
 --------JS
-function Person() {
+1. ---
+function Person {
         return(
             <div class="person">
                 <h1>Max</h1>
@@ -22,3 +26,17 @@ function Person() {
 
 ReactDOM.render(<Person />, 
                 document.querySelector('#p1'));
+
+2. ---
+function Person(props) {
+        return(
+            <div class="person">
+                <h1>{props.name}</h1>
+                <p>Age: {props.age}</p>
+            </div>
+        );
+}
+
+ReactDOM.render(<Person name="Max" age="28"/>, 
+                document.querySelector('#p1'));
+
