@@ -1,12 +1,13 @@
             --------HTML
-1.---
+# html 
+```html
 <div id="p1"></div>
 
 <div class="person">
     <h1>Manu</h1>
     <p>Age:29</p>
 </div>
-
+```
 
 2.---
 <div id="p1"></div>
@@ -17,14 +18,17 @@
 3.---
 <div id="app"></div>
 
+```
 
-
-            --------CSS
+# css
+ ```css           
 .person {
     display: ....
 }
+```
 
-            --------JS
+# js
+```js          
 1. ---
 function Person {
         return(
@@ -76,4 +80,4 @@ var app = (
 ReactDOM.render(app, 
                 document.querySelector('#app'));
 
-
+```
