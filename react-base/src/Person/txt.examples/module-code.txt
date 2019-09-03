@@ -18,3 +18,8 @@ export const baseData =10;
 import { baseData } from '.utility.js'
 import { clean } from '.utility.js'
 == this is named exports
+
+Named import also are:
+import { smt as Smt } from './utility.js'
+import * as bundled from '.utility.js'
+

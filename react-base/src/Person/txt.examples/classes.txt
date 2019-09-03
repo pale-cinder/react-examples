@@ -1,0 +1,39 @@
+    ---Classes 
+    ---Properties
+    --Methods
+
+class Person {
+    //property
+        name = 'Max'
+    //method 
+        call = () => {...}
+}
+
+//inheritance
+class Person expends Master
+
+
+Example:
+//with inheriting
+class Human {
+    constructor() {
+        this.gender = 'male';
+    }
+    printGender() {
+        console.log(this.gender);
+    }
+}
+
+class Person extends Human {
+    constructor () {
+        super(); //for executing the parent constructor to
+        this.name = 'Max';
+    }
+
+    printMyName() {
+        console.log(this.name);
+    }
+}
+const person = new Person(); //storing the instances 
+person.printMyName(); //execute
+person.printGender();
