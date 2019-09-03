@@ -29,3 +29,8 @@ const printMyName = () => {
     ...
    }
 printMyName();
+
+//if all we have is to have a return function->
+//no need to write the word return and the functions writes in one line
+const multiply = (number) => number * 2;
+console.log(multiply(2));
