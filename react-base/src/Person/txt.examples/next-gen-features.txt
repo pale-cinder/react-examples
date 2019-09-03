@@ -1,3 +1,31 @@
 var = 
 let                     &                       const
 is variable value                               is constant value
+
+
+
+    ---Arrow Function
+
+const myFunction = (list of arguments) => {
+    Function Body
+    //where this.function is always keep the context and doesnt change it in a run time
+}
+
+
+Example: 
+const printMyName = (name, age) => {
+    console.log(name, age);
+}
+printMyName('Max', '28');
+
+//if:
+const printMyName = name => {
+    ...
+   }
+//this valid only if  one argument 
+
+/if there is no arguments:
+const printMyName = () => {
+    ...
+   }
+printMyName();
