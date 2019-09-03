@@ -1,0 +1,3 @@
+var = 
+let                     &                       const
+is variable value                               is constant value
