@@ -1,0 +1,27 @@
+    ---Operators
+
+    Spread                          
+
+array of elements               
+or object properties
+
+Example:
+const newArray = [...oldArray, 1,2]
+const newObject = { ...oldObject, newProp: 5 }
+
+Usage:
+const numbers = [1, 2, 3];
+const newNumbers = [...numbers, 4];
+
+console.log(newNumbers);
+
+
+
+    Rest
+
+used to merge a list of function arguments into an array
+
+Example:
+function sortArts(...args) {
+    return args.sort()
+}
