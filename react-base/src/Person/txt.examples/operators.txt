@@ -1,6 +1,6 @@
     ---Operators
 
-    Spread                          
+            Spread                          
 
 array of elements               
 or object properties
@@ -9,15 +9,26 @@ Example:
 const newArray = [...oldArray, 1,2]
 const newObject = { ...oldObject, newProp: 5 }
 
-Usage:
+    Usage:
 const numbers = [1, 2, 3];
 const newNumbers = [...numbers, 4];
 
 console.log(newNumbers);
 
+    Usage for objects:
+const person = {
+    name: 'Max'
+};
+const newPerson = {
+    ...person,
+    age:28
+}
+console.log(newPerson);
 
 
-    Rest
+
+
+            Rest
 
 used to merge a list of function arguments into an array
 
