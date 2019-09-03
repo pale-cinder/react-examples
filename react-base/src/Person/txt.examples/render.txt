@@ -1,5 +1,5 @@
---------HTML
-
+            --------HTML
+1.---
 <div id="p1"></div>
 
 <div class="person">
@@ -8,12 +8,18 @@
 </div>
 
 
---------CSS
+1.---
+<div id="p1"></div>
+
+<div id="p2"></div>
+
+
+            --------CSS
 .person {
     display: ....
 }
 
---------JS
+            --------JS
 1. ---
 function Person {
         return(
@@ -39,4 +45,7 @@ function Person(props) {
 
 ReactDOM.render(<Person name="Max" age="28"/>, 
                 document.querySelector('#p1'));
+
+ReactDOM.render(<Person name="Manu" age="29"/>, 
+                document.querySelector('#p2'));
 
