@@ -20,3 +20,18 @@ console.log(secondPerson);
 //The result is: Albus Dumbledore
 ```
 Here, stores the pointer to the place in memory, and when assigned person to the secondPerson (secondPerson = person) that pointer would be copied. 
+If reassign reference type it copies the pointer not a value.
+
+If: 
+```javascript
+const person = {
+    name: 'Albus'
+};
+
+const secondPerson = {
+    ...person
+};
+person.name = 'Albus Dumbledore';
+console.log(secondPerson);
+//The result is: Albus 
+```
