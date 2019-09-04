@@ -1,5 +1,7 @@
-            --------HTML
-# html 
+# HTML
+
+### 1.
+
 ```html
 <div id="p1"></div>
 
@@ -9,27 +11,32 @@
 </div>
 ```
 
-2.---
+### 2.
+
+```html
 <div id="p1"></div>
 
 <div id="p2"></div>
-
-
-3.---
-<div id="app"></div>
-
 ```
 
-# css
+### 3.
+```html
+<div id="app"></div>
+```
+
+# CSS
+
  ```css           
 .person {
     display: ....
 }
 ```
 
-# js
+# JS
+
+### 1.
+
 ```js          
-1. ---
 function Person {
         return(
             <div class="person">
@@ -41,8 +48,11 @@ function Person {
 
 ReactDOM.render(<Person />, 
                 document.querySelector('#p1'));
+```
 
-2. ---
+### 2.
+
+```js
 function Person(props) {
         return(
             <div class="person">
@@ -57,8 +67,11 @@ ReactDOM.render(<Person name="Max" age="28"/>,
 
 ReactDOM.render(<Person name="Manu" age="29"/>, 
                 document.querySelector('#p2'));
+```
 
-3. ---
+### 3.
+
+```js
 function Person(props) {
         return(
             <div class="person">

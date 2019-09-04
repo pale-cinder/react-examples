@@ -2,28 +2,21 @@
 
 Extract array elements or object properties and store them in variables
 
-## Array Destructuring
-
-### Else
+### Array Destructuring
 
 ```javascript
 [a,b] = ['Hello', 'Max']
+console.log(a) //Hello
+console.log(b) //Max
 ```
 
-## Something else
+### Array Destructuring
 
-1. a
-2. bcd
-3. else
+```javascript
+{name} = ['Hello', 'Max']
+console.log(a) //Hello
+console.log(b) //undefined
 
-> Other stuff goes here
-
-```html
-<div>Test</div>
+### Examples:
+const numbers = [1, 2, 3 ]
 ```
-
-Todo:
-- done
-- not done
-- sleep
-- eat
