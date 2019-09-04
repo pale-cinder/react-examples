@@ -1,7 +1,6 @@
-    ---Classes 
-    ---Properties
-    --Methods
+# Classes, Properties, Methods
 
+```javascript
 class Person {
     //property
         name = 'Max'
@@ -11,9 +10,10 @@ class Person {
 
 //inheritance
 class Person expends Master
-
+```
 
 Example:
+```javascript
 //with inheriting
 class Human {
     constructor() {
@@ -37,22 +37,26 @@ class Person extends Human {
 const person = new Person(); //storing the instances 
 person.printMyName(); //execute
 person.printGender();
+```
 
-
----
-ES6 properties:
+#### ES6 properties:
+```javascript
 constructor () {
     this.myProperty = 'value'
 }
+```
 
-ES7 properties new way:
+#### ES7 properties (new way):
+```javascript
 myProperty = 'value'
+```
 
-
----
-ES6 methods:
+#### ES6 methods:
+```javascript
 myMethod () {...}
+``` 
 
-ES7 methods new way:
+#### ES7 methods (new way):
+```javascript
 myMethod = () => {...}
-
+```
