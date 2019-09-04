@@ -10,13 +10,28 @@ console.log(a) //Hello
 console.log(b) //Max
 ```
 
-### Array Destructuring
+### Object Destructuring
 
 ```javascript
 {name} = ['Hello', 'Max']
 console.log(a) //Hello
 console.log(b) //undefined
-
-### Examples:
-const numbers = [1, 2, 3 ]
 ```
+
+### Examples: Array Destructuring
+
+```javascript
+const numbers = [1, 2, 3 ];
+[num1, num2] = numbers;
+console.log(num1, num2);
+```
+The result is: 1 2.
+
+If: 
+```javascript
+const numbers = [1, 2, 3 ];
+[num1, , num3] = numbers;
+console.log(num1, num3);
+```
+The result is: 1 3.
+
