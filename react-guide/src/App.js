@@ -8,7 +8,10 @@ function App() {
   //     <h1>Hello world!</h1>
   //   </div>
   // );
-  return React.createElement('div', null, 'h1', 'Hello React');
+
+  // nested React element
+  return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Hello React works'));
+
 }
 
 export default App;
