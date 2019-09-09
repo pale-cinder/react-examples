@@ -4,12 +4,26 @@ import './App.css';
 import Person from './Person/Person';
 
 function App() {
+  
+  state = {
+    persons: [
+      { name: 'Harry', age: 18 },
+      { name: 'Hermione', age: 17 },
+      { name: 'Albus', age: 1 }
+    ]
+  };
+  
+  switchHandler = () => {
+    console.log('clicked');
+  }
+
   return (
     <div className="App">
       <h1>Hello world!</h1>
-      <Person name="Albus" age="1" />
-      <Person name="Harry" age="18">My hobbies: Quidditch</Person>
-      <Person name="Hermiona" age="16" />
+      <button onClick={this.switchHandler}>Switch Name</button>
+      <Person name={this.state.persons[1].name} age="18" />
+      <Person name={this.state.persons[0].name} age="17">My hobbies: Quidditch</Person>
+      <Person name={this.state.persons[2].name} age="1" />
     </div>
   );
 
