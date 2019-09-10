@@ -4,7 +4,7 @@ import './App.css';
 import Person from './Person/Person';
 
 //function App() {
-  const app = props => {
+  const App = props => {
     const [ personsState, setPersonsState ] = useState({ //useState returns always two elements and only two elements
       persons: [
         { name: 'Harry', age: 18 },
@@ -34,21 +34,21 @@ import Person from './Person/Person';
       <h1>Hello world!</h1>
       <button onClick={switchHandler}>Switch Name</button>
       <Person 
-        name={setPersonsState.persons[1].name} 
+        name={personsState.persons[1].name}  
         age="18" />
 
       <Person 
-        name={setPersonsState.persons[0].name} 
+        name={personsState.persons[0].name} 
         age="17">
         My hobbies: Quidditch
       </Person>
 
       <Person 
-        name={setPersonsState.persons[2].name} 
+        name={personsState.persons[2].name} 
         age="1" />
 
     </div>
   );
 }
 
-export default app;
+export default App;
