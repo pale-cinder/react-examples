@@ -33,6 +33,7 @@ import Person from './Person/Person';
     <div className="App">
       <h1>Hello world!</h1>
       <button onClick={switchHandler}>Switch Name</button>
+      <div>
       <Person 
         name={personsState.persons[1].name}  
         age="18" />
@@ -46,7 +47,7 @@ import Person from './Person/Person';
       <Person 
         name={personsState.persons[2].name} 
         age="1" />
-
+      </div>      
     </div>
   );
 }
