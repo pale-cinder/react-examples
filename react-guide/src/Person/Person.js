@@ -11,3 +11,4 @@ const person = (props) => {
 };
 
 export default person;
+// this is stateless component

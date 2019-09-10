@@ -52,3 +52,4 @@ import Person from './Person/Person';
 }
 
 export default App;
+//this is statefull component
