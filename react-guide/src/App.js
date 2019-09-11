@@ -15,6 +15,22 @@ class App extends Component {
     showPersons: false
   };
 
+  nameChangedHandler = (event, id) => {
+    const personIndex = this.state.person.findIndex(p => {
+      return p.id === id;
+    });
+
+    const person = {
+      ...this.state.persons[personIndex]
+    };
+
+    person.name = event.target.value;
+    const persons = [...this.state.persons];
+    persons[personIndex] = person;
+
+    this.setState( { persons: persons} );
+  }
+
   deletePersonHandler = (personIndex) => {
     // const persons = this.state.persons.splice();
     const persons = [...this.state.persons];
@@ -46,7 +62,7 @@ class App extends Component {
             // add a key property to speed up rendering, to find out which element changed and which didnt
             // it will render only what was changed
             key={person.id}
-
+            changed={(event) => this.nameChangedHandler(event, person.id)}
             />
           })}
 
