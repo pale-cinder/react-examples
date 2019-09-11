@@ -60,8 +60,9 @@ import Person from './Person/Person';
       style={style}
         onClick={()=> this.togglePersonHandler()}>Switch Name
       </button>
-  
+      {/* not the best solution here */}
       { this.state.showPersons === true ?
+
         <div>
       <Person 
         name={this.state.persons[1].name}  
