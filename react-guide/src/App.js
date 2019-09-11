@@ -7,9 +7,9 @@ class App extends Component {
   state = {
     //useState returns always two elements and only two elements
     persons: [
-      { name: "Harry", age: 18 },
-      { name: "Hermione", age: 17 },
-      { name: "Albus", age: 1 }
+      { id: 'dfdd1', name: "Harry", age: 18 },
+      { id: 'g4g1', name: "Hermione", age: 17 },
+      { id: 'bfg1', name: "Albus", age: 1 }
     ],
     otherState: "something else",
     showPersons: false
@@ -42,7 +42,12 @@ class App extends Component {
             return <Person 
             click={() => this.deletePersonHandler(index)}
             name={person.name} 
-            age={person.age} />
+            age={person.age} 
+            // add a key property to speed up rendering, to find out which element changed and which didnt
+            // it will render only what was changed
+            key={person.id}
+
+            />
           })}
 
         </div>
