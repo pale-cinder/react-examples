@@ -15,6 +15,12 @@ class App extends Component {
     showPersons: false
   };
 
+  deletePersonHandler = (personIndex) => {
+    const persons = this.state.persons;
+    persons.splice(personIndex, 1);
+    this.setState({persons: persons})
+  }
+
   togglePersonHandler = () => {
     const doesShow = this.state.showPersons;
     this.setState({ showPersons: !doesShow });
@@ -31,8 +37,9 @@ class App extends Component {
       persons = (
         <div>
           {/* take elements and pass to the method, so we have an array of elements of java script objects  */}
-          {this.state.persons.map(person => {
+          {this.state.persons.map((person, index) => {
             return <Person 
+            click={() => this.deletePersonHandler(index)}
             name={person.name} 
             age={person.age} />
           })}
