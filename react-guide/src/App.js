@@ -42,8 +42,13 @@ import Person from './Person/Person';
     // }
     
     togglePersonHandler = () => {
-      constdoesShow = this.state.showPersons;
+      const doesShow = this.state.showPersons;
       this.setState({showPersons: !doesShow});
+    }
+
+    render () {
+      const style = {
+        backgroundColor: 'white'
     }
 
   
@@ -52,29 +57,31 @@ import Person from './Person/Person';
       <h1>Hello world!</h1>
 
       <button 
+      style={style}
         onClick={()=> this.togglePersonHandler()}>Switch Name
       </button>
   
       { this.state.showPersons === true ?
         <div>
       <Person 
-        name={personsState.persons[1].name}  
+        name={this.state.persons[1].name}  
         age="18" />
 
       <Person 
-        name={personsState.persons[0].name} 
+        name={this.state.persons[0].name} 
         age="17">
         My hobbies: Quidditch
       </Person>
 
       <Person 
-        name={personsState.persons[2].name} 
+        name={this.state.persons[2].name} 
         age="1" />
       </div> : null
     }      
     </div>
   );
 }
+  };
 
 export default App;
 //this is statefull component
