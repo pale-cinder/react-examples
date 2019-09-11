@@ -3,19 +3,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import Person from "./Person/Person";
 
-//function App() {
-// const App = props => {
-//   const [ personsState, setPersonsState ] = useState({ //useState returns always two elements and only two elements
-//     persons: [
-//       { name: 'Harry', age: 18 },
-//       { name: 'Hermione', age: 17 },
-//       { name: 'Albus', age: 1 }
-//     ],
-//     otherState: 'something else'
-//   });
-
-//   const [otherState, setOtherState] = useState('something else');
-
 class App extends Component {
   state = {
     //useState returns always two elements and only two elements
@@ -27,20 +14,6 @@ class App extends Component {
     otherState: "something else",
     showPersons: false
   };
-
-  // const [otherState, setOtherState] = useState('something else');
-
-  // const switchHandler = () => {
-  //   //this.state.persons[0].name = 'Potter';
-  //   //console.log('clicked');
-  //   setPersonsState({ //it will override the state but will not touch something that is not changed
-  //     persons: [
-  //     { name: 'Harry Potter', age: 18 },
-  //     { name: 'Hermione', age: 17 },
-  //     { name: 'Albus', age: 1 }
-  //     ],
-  //   })
-  // }
 
   togglePersonHandler = () => {
     const doesShow = this.state.showPersons;
@@ -57,13 +30,13 @@ class App extends Component {
     if (this.state.showPersons) {
       persons = (
         <div>
-          <Person name={this.state.persons[1].name} age="18" />
+          {/* take elements and pass to the method, so we have an array of elements of java script objects  */}
+          {this.state.persons.map(person => {
+            return <Person 
+            name={person.name} 
+            age={person.age} />
+          })}
 
-          <Person name={this.state.persons[0].name} age="17">
-            My hobbies: Quidditch
-          </Person>
-
-          <Person name={this.state.persons[2].name} age="1" />
         </div>
       );
     }
