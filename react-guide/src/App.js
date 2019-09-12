@@ -45,7 +45,11 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: "white"
+      backgroundColor: '#699012',
+      font: 'inherit',
+      border: '1px solid black',
+      padding: '8px',
+      cursor: 'pointer'
     };
 
     let persons = null; //by default the var is null
@@ -75,8 +79,10 @@ class App extends Component {
       <div className="App">
         <h1>Hello world!</h1>
 
-        <button style={style} onClick={() => this.togglePersonHandler()}>
-          Switch Name
+        <button 
+          style={style} 
+          onClick={() => this.togglePersonHandler()}>
+          Toggle
         </button>
         {/* output persons here */}
         {persons}
