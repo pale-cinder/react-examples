@@ -1,5 +1,5 @@
 import React, { useState, Component } from "react";
-import Radium from "radium";
+import Radium, { StyleRoot } from "radium";
 import logo from "./logo.svg";
 import "./App.css";
 import Person from "./Person/Person";
@@ -46,15 +46,15 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: '#699012',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid white',
-      padding: '8px',
-      cursor: 'pointer',
-      ':hover': {
-        backgroundColor : 'lightgreen',
-        color: 'black'
+      backgroundColor: "#699012",
+      color: "white",
+      font: "inherit",
+      border: "1px solid white",
+      padding: "8px",
+      cursor: "pointer",
+      ":hover": {
+        backgroundColor: "lightgreen",
+        color: "black"
       }
     };
 
@@ -80,36 +80,36 @@ class App extends Component {
         </div>
       );
 
-      style.backgroundColor = 'red';
-      style[':hover'] = {
-        backgroundColor : 'yellow',
-        color: 'black'
-      }
+      style.backgroundColor = "red";
+      style[":hover"] = {
+        backgroundColor: "yellow",
+        color: "black"
+      };
     }
 
     let fontClass = [];
     if (this.state.persons.length <= 2) {
-      fontClass.push('color'); // class = ['color']
+      fontClass.push("color"); // class = ['color']
     }
     if (this.state.persons.length <= 1) {
-      fontClass.push('bold');
+      fontClass.push("bold");
     }
     if (this.state.persons.length == 0) {
-      fontClass.push('backcolor');
+      fontClass.push("backcolor");
     }
 
     return (
-      <div className="App">
-        <p className={fontClass.join(' ')}>Hello world!</p>
+      <StyleRoot>
+        <div className="App">
+          <p className={fontClass.join(" ")}>Hello world!</p>
 
-        <button 
-          style={style} 
-          onClick={() => this.togglePersonHandler()}>
-          Toggle
-        </button>
-        {/* output persons here */}
-        {persons}
-      </div>
+          <button style={style} onClick={() => this.togglePersonHandler()}>
+            Toggle
+          </button>
+          {/* output persons here */}
+          {persons}
+        </div>
+      </StyleRoot>
     );
   }
 }
