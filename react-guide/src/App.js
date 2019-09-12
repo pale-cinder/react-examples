@@ -1,4 +1,5 @@
 import React, { useState, Component } from "react";
+import Radium from "radium";
 import logo from "./logo.svg";
 import "./App.css";
 import Person from "./Person/Person";
@@ -50,7 +51,11 @@ class App extends Component {
       font: 'inherit',
       border: '1px solid white',
       padding: '8px',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      ':hover': {
+        backgroundColor : 'lightgreen',
+        color: 'black'
+      }
     };
 
     let persons = null; //by default the var is null
@@ -76,6 +81,10 @@ class App extends Component {
       );
 
       style.backgroundColor = 'red';
+      style[':hover'] = {
+        backgroundColor : 'yellow',
+        color: 'black'
+      }
     }
 
     let fontClass = [];
@@ -105,5 +114,5 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Radium(App);
 //this is statefull component
