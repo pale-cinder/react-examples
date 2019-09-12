@@ -78,9 +78,20 @@ class App extends Component {
       style.backgroundColor = 'red';
     }
 
+    let fontClass = [];
+    if (this.state.persons.length <= 2) {
+      fontClass.push('color'); // class = ['color']
+    }
+    if (this.state.persons.length <= 1) {
+      fontClass.push('bold');
+    }
+    if (this.state.persons.length == 0) {
+      fontClass.push('backcolor');
+    }
+
     return (
       <div className="App">
-        <h1>Hello world!</h1>
+        <p className={fontClass.join(' ')}>Hello world!</p>
 
         <button 
           style={style} 

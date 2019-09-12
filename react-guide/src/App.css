@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+.color {
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.backcolor {
+  /* background-color: #282c34; */
+  /* font-size: 10px; */
+  color:yellowgreen;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -31,3 +45,4 @@
     transform: rotate(360deg);
   }
 }
+
