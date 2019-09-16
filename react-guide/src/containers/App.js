@@ -1,7 +1,7 @@
 import React, { useState, Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Person from "../components/Person/Person";
+import Persons from "../components/Persons/Persons";
 
 class App extends Component {
   state = {
@@ -59,19 +59,10 @@ class App extends Component {
       persons = (
         <div>
           {/* take elements and pass to the method, so we have an array of elements of java script objects  */}
-          {this.state.persons.map((person, index) => {
-            return (
-              <Person
-                click={() => this.deletePersonHandler(index)}
-                name={person.name}
-                age={person.age}
-                // add a key property to speed up rendering, to find out which element changed and which didnt
-                // it will render only what was changed
-                key={person.id}
-                changed={event => this.nameChangedHandler(event, person.id)}
-              />
-            );
-          })}
+          <Persons 
+            persons={this.state.persons} 
+            clicked={this.deletePersonHandler}
+            changed={this.nameChangedHandler} />
         </div>
       );
 
@@ -90,13 +81,7 @@ class App extends Component {
     }
 
     return (
-        <div className="App">
-          <p className={fontClass.join(" ")}>Hello world!</p>
-
-          <button style={style} onClick={() => this.togglePersonHandler()}>
-            Toggle
-          </button>
-          {/* output persons here */}
+        <div className={classes.App}>
           {persons}
         </div>
     );
